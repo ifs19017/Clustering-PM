@@ -16,18 +16,18 @@
   <!-- Font Style-->
   <style media="screen">body {padding-top: 56px; font-family: 'Muli', sans-serif}</style>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="../static/fav/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../static/fav/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../static/fav/favicon-16x16.png">
-  <link rel="manifest" href="../static/fav/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="../resources/fav/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../resources/fav/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../resources/fav/favicon-16x16.png">
+  <link rel="manifest" href="../resources/fav/site.webmanifest">
 
   <!-- Custom font -->
-  <link href="https://fonts.googleapis.com/css?family=Assistant|Cabin|Indie+Flower|Muli|Nunito&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../static/style.css">
+  {{-- <link href="https://fonts.googleapis.com/css?family=Assistant|Cabin|Indie+Flower|Muli|Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css"> --}}
 
   <!-- JQuery -->
-  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  {{-- <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> --}}
 
 </head>
 
