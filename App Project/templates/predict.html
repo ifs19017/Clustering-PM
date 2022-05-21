@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>Prediksi Tingkatan Breast Cancer</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous" />
+
+  <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" type="text/css">
+
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Care Your Breast Cancer</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/form_predict">Prediksi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">Tentang Kami</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid pt-5 pb-5">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Form Diagnosa Breast Cancer Berdasarkan Ukuran Inti Sel Jaringan</h2>
+        </div>
+        <div class="col-md-6">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#modal" style="float: right">
+            <i class="fa fa-question"></i> Bantuan
+          </button>      
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Panduan Pengisian Form</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              
+              <ol>
+                <li>User masuk ke aplikasi web.</li>
+                <li>Pada halaman awal tekan button “Mulai Prediksi” atau klik menu “Prediksi” pada bagian menu bar.</li>
+                <li>Isi form yang ada di halaman tersebut.</li>
+                <li>Form Radius Lobus adalah besar radius tiap titik menuju tepi kanker</li>
+                <li>Form Rata-Rata Tekstur Permukaan adalah tinngkat keabu-abuan dari kanker  </li>
+                <li>Form Rata-Rata Perimeter adalah rata-rata keliling inti kanker </li>
+                <li>Form Rata-Rata Luas Area Kanker adalah rata-rata besar area yang memiliki inti kanker  </li>
+                <li>Form Rata-Rata Tingkat Kehalusan adalah rata-rata tingkat kehalusan dari kanker </li>
+                <li>Form Rata-Rata Compactness adalah adalah rata-rata untuk tingkat Compactness dari kanker </li>
+                <li>Form Rata-Rata Concavity adalah besar rata-rata presentasi dari tingkat keparahan dari kontur</li>
+                <li>Form Rata-Rata Poin Cocave adalah rata-rata banyaknya titik atau inti kanker   </li>
+                <li>Setelah mengisi form tersebut user dapat melihat hasilnya dengan menekan button "Lakukan Prediksi".</li>
+              </ol> 
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-3">
+
+      <br>
+      
+      <form action="{{ url_for('predict')}}" method="POST">
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="radius_mean">Radius Lobus</label>
+              <input type="number" min="0" max="100" step="0.01" class="form-control" id="radius_mean" name="radius_mean" placeholder="Masukan Rata-Rata Radius" required />
+            </div>
+
+            <div class="form-group">
+              <label for="texture_mean">Rata-Rata Tekstur Permukaan</label>
+              <input type="number" min="0" max="100" step="0.01" class="form-control" id="texture_mean" name="texture_mean" placeholder="Masukan Standar Deviasi Nilai Skala Abu-Abu" required />
+            </div>
+
+            <div class="form-group">
+              <label for="perimeter_mean">Rata-Rata Perimeter </label>
+              <input type="number" min="0" max="1000" step="0.01" class="form-control" id="perimeter_mean" name="perimeter_meann" placeholder="Masukan Rata-Rata Keliling Inti Kanker" required />
+            </div>
+
+            <div class="form-group">
+              <label for="area_mean">Rata-Rata Luas Area Kanker</label>
+              <input type="number" min="0" max="10000" step="0.01" class="form-control" id="area_mean" name="area_mean" placeholder="Masukan rata-rata area sel nukleus" required />
+            </div>
+           
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="smoothness_mean">Rata-Rata Tingkat Kehalusan</label>
+              <input type="number" min="0" max="10000" step="0.00001" class="form-control" id="smoothness_mean" name="smoothness_mean" placeholder="Masukan Rata-Rata Variasi Lokal dalam Panjang Radius" required />
+            </div>
+
+            <div class="form-group">
+              <label for="compactness_mean">Rata-Rata Compactness</label>
+              <input type="number" min="0" max="10000" step="0.00001" class="form-control" id="compactness_mean" name="compactness_mean" placeholder="Rata-Rata dari perimeter^2 / area - 1.0" required />
+            </div>
+
+            <div class="form-group">
+              <label for="concavity_mean">Rata-Rata Concavity</label>
+              <input type="number" min="0" max="100" step="0.00001" class="form-control" id="concavity_mean" name="concavity_mean" placeholder="Masukan rata-rata keparahan bagian cekung dari kontur" required />
+            </div>
+
+            <div class="form-group">
+              <label for="concave_points_mean">Rata-Rata Poin Cocave</label>
+              <input type="number" min="0" max="100" step="0.00001" class="form-control" id="concave_points_mean" name="concave_points_mean" placeholder="Masukan rata-rata untuk jumlah bagian cekung dari kontur" required />
+            </div>
+
+          </div>
+        </div>            
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-success">Lakukan Prediksi</button>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+
+  <div class="container-fluid bg-dark text-white mt-5" style="padding: 20px 0;">
+    <div class="container">
+      <small>&copy; @IT DEL 2022  Diagnosis Breast Cancer ~ Kelompok 6 ~</small>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>
