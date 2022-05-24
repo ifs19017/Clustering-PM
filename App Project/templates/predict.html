@@ -94,8 +94,8 @@
       
       <form action="{{ url_for('predict')}}" method="POST">
 
-        <div class="row">
-          <div class="col-md-6">
+        <div class="" style="font-weight: bold;">
+          <!-- <div class="col-md-6"> -->
             <div class="form-group">
               <label for="radius_mean">Radius Lobus</label>
               <input type="number" min="0" max="100" step="0.01" class="form-control" id="radius_mean" name="radius_mean" placeholder="Masukan Rata-Rata Radius" required />
@@ -116,6 +116,7 @@
               <input type="number" min="0" max="10000" step="0.01" class="form-control" id="area_mean" name="area_mean" placeholder="Masukan rata-rata area sel nukleus" required />
             </div>
            
+<<<<<<< HEAD
             <div class="form-group">
               <label for="symmetry_mean">Rata-Rata Simetri</label>
               <input type="number" min="0" max="10000" step="0.01" class="form-control" id="symmetry_mean" name="symmetry_mean" placeholder="Masukan rata-rata simetri" required />
@@ -141,8 +142,11 @@
               <input type="number" min="0" max="10000" step="0.01" class="form-control" id="area_mean" name="area_mean" placeholder="Masukan rata-rata area sel nukleus" required />
             </div>
           </div>
+=======
+          <!-- </div> -->
+>>>>>>> 85d312123f62e7244661498e430082c184625dc4
 
-          <div class="col-md-6">
+          <!-- <div class="col-md-6"> -->
             <div class="form-group">
               <label for="smoothness_mean">Rata-Rata Tingkat Kehalusan</label>
               <input type="number" min="0" max="10000" step="0.00001" class="form-control" id="smoothness_mean" name="smoothness_mean" placeholder="Masukan Rata-Rata Variasi Lokal dalam Panjang Radius" required />
@@ -162,8 +166,8 @@
               <label for="concave_points_mean">Rata-Rata Poin Cocave</label>
               <input type="number" min="0" max="100" step="0.00001" class="form-control" id="concave_points_mean" name="concave_points_mean" placeholder="Masukan rata-rata untuk jumlah bagian cekung dari kontur" required />
             </div>
-
-          </div>
+            <!-- 
+          </div> -->
         </div>            
 
         <div class="form-group">
@@ -174,11 +178,39 @@
     </div>
   </div>
 
-  <div class="container-fluid bg-dark text-white mt-5" style="padding: 20px 0;">
-    <div class="container">
-      <small>&copy; @IT DEL 2022  Diagnosis Breast Cancer ~ Kelompok 6 ~</small>
-    </div>
-  </div>
+  <footer class="container-fluid bg-dark text-white" style="padding: 20px 0; margin-top: 150px">    
+    <div class="container my-auto">
+      
+      <div class="row mt-5">
+      <div class="description col-5">
+            <h1 class="fs-5">CARE YOUR BREAST CANCER</h1>
+            <p class="fs-6 w-75">Aplikasi Care Your Breast Cancer merupakan aplikasi berbasis website dimana aplikasi ini berfungsi untuk memprediksi
+                apakah penyakit kanker payudara yang di derita itu dalam kategori malignant(ganas) atau benign(jinak)</p>
+          </div>
+
+          <div class="link col-3">
+            <h1 class="fs-5"> TAUTAN</h1>
+            <ul class="list-unstyled d-flex flex-column justify-content-center fs-6">
+              <li><a class="" href="/">Beranda</a></li>
+              <li><a class="" href="/form_predict">Prediksi</a></li>
+              <li><a class="" href="/about">Tentang Kami</a></li>
+            </ul>
+          </div>
+
+          <div class="contact-information col-4">
+            <h1 class="fs-5">INSTITUT TEKNOLOGI DEL</h1>
+            <p class="fs-6">Fakultas Informatika dan Teknik Elektro</p>
+            <p>Jl. Sisingamangaraja, Sitoluama, Laguboti, Toba Samosir
+                Sumatera Utara, Indonesia, Kode Pos: 22381</p>
+          </div>
+        </div>
+        </div>
+        
+        <div class="container">
+          <small>&copy; @IT DEL 2022  Diagnosis Breast Cancer - Kelompok 6 -</small>
+        </div>
+
+    </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
