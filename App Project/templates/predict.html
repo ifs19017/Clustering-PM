@@ -94,8 +94,8 @@
       
       <form action="{{ url_for('predict')}}" method="POST">
 
-        <div class="" style="font-weight: bold;">
-          <!-- <div class="col-md-6"> -->
+        <div class="row" style="font-weight: bold;">
+          <div class="col-md-6"> 
             <div class="form-group">
               <label for="radius_mean">Radius Lobus</label>
               <input type="number" min="0" max="100" step="0.01" class="form-control" id="radius_mean" name="radius_mean" placeholder="Masukan Rata-Rata Radius" required />
@@ -108,44 +108,80 @@
 
             <div class="form-group">
               <label for="perimeter_mean">Rata-Rata Perimeter </label>
-              <input type="number" min="0" max="1000" step="0.01" class="form-control" id="perimeter_mean" name="perimeter_meann" placeholder="Masukan Rata-Rata Keliling Inti Kanker" required />
+              <input type="number" min="0" max="1000" step="0.00000001" class="form-control" id="perimeter_mean" name="perimeter_meann" placeholder="Masukan Rata-Rata Keliling Inti Kanker" required />
             </div>
 
             <div class="form-group">
               <label for="area_mean">Rata-Rata Luas Area Kanker</label>
-              <input type="number" min="0" max="10000" step="0.01" class="form-control" id="area_mean" name="area_mean" placeholder="Masukan rata-rata area sel nukleus" required />
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="area_mean" name="area_mean" placeholder="Masukan rata-rata area sel nukleus" required />
             </div>
+<<<<<<< HEAD
             
+=======
+           
+>>>>>>> 8f43d358de1ece7184fbb8376c6d8e30ea6fe6d6
             <div class="form-group">
               <label for="symmetry_mean">Rata-Rata Simetri</label>
-              <input type="number" min="0" max="10000" step="0.01" class="form-control" id="symmetry_mean" name="symmetry_mean" placeholder="Masukan rata-rata simetri" required />
+              <input type="number" min="0" max="10000" step="0.000001" class="form-control" id="symmetry_mean" name="symmetry_mean" placeholder="Masukan rata-rata simetri" required />
             </div>
 
             <div class="form-group">
-              <label for="fractal_dimension_mean">Rata-Rata Luas Area Kanker</label>
-              <input type="number" min="0" max="10000" step="0.01" class="form-control" id="fractal_dimension_mean" name="fractal_dimension_mean" placeholder="Masukan rata-rata area sel nukleus" required />
+              <label for="radius_se">Galat Standar Radius</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="radius_se" name="radius_se" placeholder="Masukan nilai galat standar radius" required />
             </div>
 
             <div class="form-group">
-              <label for="area_mean">Rata-Rata Luas Area Kanker</label>
-              <input type="number" min="0" max="10000" step="0.01" class="form-control" id="area_mean" name="area_mean" placeholder="Masukan rata-rata area sel nukleus" required />
+              <label for="texture_se">Galat Standar Texture </label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="texture_se" name="texture_se" placeholder="Masukan nilai galat standar texture" required />
             </div>
 
             <div class="form-group">
-              <label for="area_mean">Rata-Rata Luas Area Kanker</label>
-              <input type="number" min="0" max="10000" step="0.01" class="form-control" id="area_mean" name="area_mean" placeholder="Masukan rata-rata area sel nukleus" required />
+              <label for="perimeter_se">Galat Standar Perimeter</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="perimeter_se" name="perimeter_se" placeholder="Masukan nilai galat standar perimeter" required />
             </div>
 
             <div class="form-group">
-              <label for="area_mean">Rata-Rata Luas Area Kanker</label>
-              <input type="number" min="0" max="10000" step="0.01" class="form-control" id="area_mean" name="area_mean" placeholder="Masukan rata-rata area sel nukleus" required />
+              <label for="area_se">Galat Standar Area Kanker</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="area_se" name="area_se" placeholder="Masukan nilai galat standar area kanker" required />
             </div>
+
+            <div class="form-group">
+              <label for="smoothness_se">Galat Standar Tingkat Kehalusan</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="smoothness_se" name="smoothness_se" placeholder="Masukan nilai galat standar tingkat kehalusan" required />
+            </div>
+
+
+            <div class="form-group">
+              <label for="radius_worst">Nilai Terburuk Radius</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="radius_worst" name="radius_worst" placeholder="Masukan nilai terburuk dari radius" required />
+            </div>
+
+            <div class="form-group">
+              <label for="texture_worst">Nilai Terburuk Texture </label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="texture_worst" name="texture_worst" placeholder="Masukan nilai terburuk dari texture" required />
+            </div>
+
+            <div class="form-group">
+              <label for="perimeter_worst">Nilai Terburuk Perimeter</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="perimeter_worst" name="perimeter_worst" placeholder="Masukan nilai terburuk perimeter" required />
+            </div>
+
+            <div class="form-group">
+              <label for="area_worst">Nilai Terburuk Area Kanker</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="area_worst" name="area_worst" placeholder="Masukan nilai terburuk area kanker" required />
+            </div>
+
+            <div class="form-group">
+              <label for="smoothness_worst">Galat Standar Tingkat Kehalusan</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="smoothness_worst" name="smoothness_worst" placeholder="Masukan nilai terburuk tingkat kehalusan" required />
+            </div>
+
           </div>
 
-          <!-- <div class="col-md-6"> -->
+         <div class="col-md-6">
             <div class="form-group">
               <label for="smoothness_mean">Rata-Rata Tingkat Kehalusan</label>
-              <input type="number" min="0" max="10000" step="0.00001" class="form-control" id="smoothness_mean" name="smoothness_mean" placeholder="Masukan Rata-Rata Variasi Lokal dalam Panjang Radius" required />
+              <input type="number" min="0" max="10000" step="0.00001" class="form-control" id="smoothness_mean" name="smoothness_mean" placeholder="Masukan Rata-Rata Tingkat Kehalusan" required />
             </div>
 
             <div class="form-group">
@@ -162,8 +198,62 @@
               <label for="concave_points_mean">Rata-Rata Poin Cocave</label>
               <input type="number" min="0" max="100" step="0.00001" class="form-control" id="concave_points_mean" name="concave_points_mean" placeholder="Masukan rata-rata untuk jumlah bagian cekung dari kontur" required />
             </div>
-            <!-- 
-          </div> -->
+            
+            <div class="form-group">
+              <label for="fractal_dimension_mean">Rata-Rata Fraktal</label>
+              <input type="number" min="0" max="10000" step="0.000001" class="form-control" id="fractal_dimension_mean" name="fractal_dimension_mean" placeholder="Masukan rata-rata perkiraan tepi garis" required />
+            </div>
+
+            <div class="form-group">
+              <label for="compactness_se">Galat Standar Compactnees</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="compactness_se" name="compactness_se" placeholder="Masukan nilai galat standar compactness" required />
+            </div>
+
+            <div class="form-group">
+              <label for="concavity_se">Galat Standar Concavity</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="concavity_se" name="concavity_se" placeholder="Masukan nilai galat standar tingkat keparahan bagian cekung kontur" required />
+            </div>
+
+            <div class="form-group">
+              <label for="concave points_se">Galat Standar Poin Concave</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="concave points_se" name="concave points_se" placeholder="Masukan nilai galat standar untuk jumlah bagian cekung kontur" required />
+            </div>
+
+            <div class="form-group">
+              <label for="symmetry_se">Galat Standar Simetri</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="symmetri_se" name="symmetri_se" placeholder="Masukan nilai galat standar simetri" required />
+            </div>
+
+            <div class="form-group">
+              <label for="fractal_dimension_se">Galat Standar Fraktal</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="fractal_dimension_se" name="fractal_dimension_se" placeholder="Masukan nilai galat standar perkiraan tepi garis" required />
+            </div>
+
+            <div class="form-group">
+              <label for="compactness_worst">Nilai Terburuk Compactnees</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="compactness_worst" name="compactness_worst" placeholder="Masukan nilai terburuk compactness" required />
+            </div>
+
+            <div class="form-group">
+              <label for="concavity_se">Nilai Terburuk Concavity</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="concavity_worst" name="concavity_worst" placeholder="Masukan nilai terburuk dari tingkat keparahan bagian cekung kontur" required />
+            </div>
+
+            <div class="form-group">
+              <label for="concave points_se">Nilai Terburuk Poin Concave</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="concave points_worst" name="concave points_worst" placeholder="Masukan nilai terburuk untuk jumlah bagian cekung kontur" required />
+            </div>
+
+            <div class="form-group">
+              <label for="symmetry_worst">Nilai Terburuk Simetri</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="symmetry_worst" name="symmetry_worst" placeholder="Masukan nilai terburuk simetri" required />
+            </div>
+
+            <div class="form-group">
+              <label for="fractal_dimension_worst">Nilai Terburuk Fraktal</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="fractal_dimension_worst" name="fractal_dimension_worst" placeholder="Masukan nilai terburuk dari perkiraan tepi garis" required />
+            </div>
+          </div> 
         </div>            
 
         <div class="form-group">
@@ -179,13 +269,13 @@
       
       <div class="row mt-5">
       <div class="description col-5">
-            <h1 class="fs-5">CARE YOUR BREAST CANCER</h1>
+            <p class="fs-5"><b>CARE YOUR BREAST CANCER</b></p>
             <p class="fs-6 w-75">Aplikasi Care Your Breast Cancer merupakan aplikasi berbasis website dimana aplikasi ini berfungsi untuk memprediksi
-                apakah penyakit kanker payudara yang di derita itu dalam kategori malignant(ganas) atau benign(jinak)</p>
+                apakah penyakit kanker payudara yang di derita itu dalam kategori malignant (ganas) atau benign (jinak)</p>
           </div>
 
           <div class="link col-3">
-            <h1 class="fs-5"> TAUTAN</h1>
+            <p class="fs-5"> <b>TAUTAN</b></p>
             <ul class="list-unstyled d-flex flex-column justify-content-center fs-6">
               <li><a class="" href="/">Beranda</a></li>
               <li><a class="" href="/form_predict">Prediksi</a></li>
@@ -194,7 +284,7 @@
           </div>
 
           <div class="contact-information col-4">
-            <h1 class="fs-5">INSTITUT TEKNOLOGI DEL</h1>
+            <p class="fs-5"><b>INSTITUT TEKNOLOGI DEL</b></p>
             <p class="fs-6">Fakultas Informatika dan Teknik Elektro</p>
             <p>Jl. Sisingamangaraja, Sitoluama, Laguboti, Toba Samosir
                 Sumatera Utara, Indonesia, Kode Pos: 22381</p>
