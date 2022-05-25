@@ -115,16 +115,37 @@
               <label for="area_mean">Rata-Rata Luas Area Kanker</label>
               <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="area_mean" name="area_mean" placeholder="Masukan rata-rata area sel nukleus" required />
             </div>
-<<<<<<< HEAD
-            
-=======
-           
->>>>>>> 8f43d358de1ece7184fbb8376c6d8e30ea6fe6d6
+
+            <div class="form-group">
+              <label for="smoothness_mean">Rata-Rata Tingkat Kehalusan</label>
+              <input type="number" min="0" max="10000" step="0.00001" class="form-control" id="smoothness_mean" name="smoothness_mean" placeholder="Masukan Rata-Rata Tingkat Kehalusan" required />
+            </div>
+
+            <div class="form-group">
+              <label for="compactness_mean">Rata-Rata Compactness</label>
+              <input type="number" min="0" max="10000" step="0.00001" class="form-control" id="compactness_mean" name="compactness_mean" placeholder="Rata-Rata dari perimeter^2 / area - 1.0" required />
+            </div>
+
+            <div class="form-group">
+              <label for="concavity_mean">Rata-Rata Concavity</label>
+              <input type="number" min="0" max="100" step="0.00001" class="form-control" id="concavity_mean" name="concavity_mean" placeholder="Masukan rata-rata keparahan bagian cekung dari kontur" required />
+            </div>
+
+            <div class="form-group">
+              <label for="concave_points_mean">Rata-Rata Poin Cocave</label>
+              <input type="number" min="0" max="100" step="0.00001" class="form-control" id="concave_points_mean" name="concave_points_mean" placeholder="Masukan rata-rata untuk jumlah bagian cekung dari kontur" required />
+            </div>
+
             <div class="form-group">
               <label for="symmetry_mean">Rata-Rata Simetri</label>
               <input type="number" min="0" max="10000" step="0.000001" class="form-control" id="symmetry_mean" name="symmetry_mean" placeholder="Masukan rata-rata simetri" required />
             </div>
 
+            <div class="form-group">
+              <label for="fractal_dimension_mean">Rata-Rata Fraktal</label>
+              <input type="number" min="0" max="10000" step="0.000001" class="form-control" id="fractal_dimension_mean" name="fractal_dimension_mean" placeholder="Masukan rata-rata perkiraan tepi garis" required />
+            </div>
+            
             <div class="form-group">
               <label for="radius_se">Galat Standar Radius</label>
               <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="radius_se" name="radius_se" placeholder="Masukan nilai galat standar radius" required />
@@ -150,6 +171,34 @@
               <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="smoothness_se" name="smoothness_se" placeholder="Masukan nilai galat standar tingkat kehalusan" required />
             </div>
 
+          </div>
+
+         <div class="col-md-6">
+
+          <div class="form-group">
+            <label for="compactness_se">Galat Standar Compactnees</label>
+            <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="compactness_se" name="compactness_se" placeholder="Masukan nilai galat standar compactness" required />
+          </div>
+          
+            <div class="form-group">
+              <label for="concavity_se">Galat Standar Concavity</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="concavity_se" name="concavity_se" placeholder="Masukan nilai galat standar tingkat keparahan bagian cekung kontur" required />
+            </div>
+
+            <div class="form-group">
+              <label for="concave points_se">Galat Standar Poin Concave</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="concave points_se" name="concave points_se" placeholder="Masukan nilai galat standar untuk jumlah bagian cekung kontur" required />
+            </div>
+
+            <div class="form-group">
+              <label for="symmetry_se">Galat Standar Simetri</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="symmetri_se" name="symmetri_se" placeholder="Masukan nilai galat standar simetri" required />
+            </div>
+
+            <div class="form-group">
+              <label for="fractal_dimension_se">Galat Standar Fraktal</label>
+              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="fractal_dimension_se" name="fractal_dimension_se" placeholder="Masukan nilai galat standar perkiraan tepi garis" required />
+            </div>
 
             <div class="form-group">
               <label for="radius_worst">Nilai Terburuk Radius</label>
@@ -172,61 +221,8 @@
             </div>
 
             <div class="form-group">
-              <label for="smoothness_worst">Galat Standar Tingkat Kehalusan</label>
+              <label for="smoothness_worst">Nilai Terburuk Standar Tingkat Kehalusan</label>
               <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="smoothness_worst" name="smoothness_worst" placeholder="Masukan nilai terburuk tingkat kehalusan" required />
-            </div>
-
-          </div>
-
-         <div class="col-md-6">
-            <div class="form-group">
-              <label for="smoothness_mean">Rata-Rata Tingkat Kehalusan</label>
-              <input type="number" min="0" max="10000" step="0.00001" class="form-control" id="smoothness_mean" name="smoothness_mean" placeholder="Masukan Rata-Rata Tingkat Kehalusan" required />
-            </div>
-
-            <div class="form-group">
-              <label for="compactness_mean">Rata-Rata Compactness</label>
-              <input type="number" min="0" max="10000" step="0.00001" class="form-control" id="compactness_mean" name="compactness_mean" placeholder="Rata-Rata dari perimeter^2 / area - 1.0" required />
-            </div>
-
-            <div class="form-group">
-              <label for="concavity_mean">Rata-Rata Concavity</label>
-              <input type="number" min="0" max="100" step="0.00001" class="form-control" id="concavity_mean" name="concavity_mean" placeholder="Masukan rata-rata keparahan bagian cekung dari kontur" required />
-            </div>
-
-            <div class="form-group">
-              <label for="concave_points_mean">Rata-Rata Poin Cocave</label>
-              <input type="number" min="0" max="100" step="0.00001" class="form-control" id="concave_points_mean" name="concave_points_mean" placeholder="Masukan rata-rata untuk jumlah bagian cekung dari kontur" required />
-            </div>
-            
-            <div class="form-group">
-              <label for="fractal_dimension_mean">Rata-Rata Fraktal</label>
-              <input type="number" min="0" max="10000" step="0.000001" class="form-control" id="fractal_dimension_mean" name="fractal_dimension_mean" placeholder="Masukan rata-rata perkiraan tepi garis" required />
-            </div>
-
-            <div class="form-group">
-              <label for="compactness_se">Galat Standar Compactnees</label>
-              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="compactness_se" name="compactness_se" placeholder="Masukan nilai galat standar compactness" required />
-            </div>
-
-            <div class="form-group">
-              <label for="concavity_se">Galat Standar Concavity</label>
-              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="concavity_se" name="concavity_se" placeholder="Masukan nilai galat standar tingkat keparahan bagian cekung kontur" required />
-            </div>
-
-            <div class="form-group">
-              <label for="concave points_se">Galat Standar Poin Concave</label>
-              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="concave points_se" name="concave points_se" placeholder="Masukan nilai galat standar untuk jumlah bagian cekung kontur" required />
-            </div>
-
-            <div class="form-group">
-              <label for="symmetry_se">Galat Standar Simetri</label>
-              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="symmetri_se" name="symmetri_se" placeholder="Masukan nilai galat standar simetri" required />
-            </div>
-
-            <div class="form-group">
-              <label for="fractal_dimension_se">Galat Standar Fraktal</label>
-              <input type="number" min="0" max="10000" step="0.0000001" class="form-control" id="fractal_dimension_se" name="fractal_dimension_se" placeholder="Masukan nilai galat standar perkiraan tepi garis" required />
             </div>
 
             <div class="form-group">
